@@ -1,14 +1,24 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
-
+from main_config import Config
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'somekey@letmelogin@1'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db' 
-app.config['LOGIN_VIEW'] = 'login'
+app.config.from_object(Config)
 
-db = SQLAlchemy(app)
-login_manager = LoginManager(app)
+from flask import Flask
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager
+from main_config import Config
+
+app = Flask(__name__)
+app.config.from_object(Config)
+
+bcrypt = Bcrypt(app)
+login_manager: LoginManager = LoginManager(app)
+
+
+from app import routes
+
 
 from app import routes
