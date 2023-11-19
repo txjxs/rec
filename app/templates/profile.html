@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>{{ current_user.username }}'s Profile</h2>
+<p>Email: {{ current_user.email }}</p>
+<!-- Add more user information as needed -->
+{% endblock %}
