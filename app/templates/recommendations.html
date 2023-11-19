@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Movie Recommendations</h2>
+<ul>
+    {% for movie in movies %}
+        <li>{{ movie.title }} - {{ movie.genre }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

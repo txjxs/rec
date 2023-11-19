@@ -2,3 +2,4 @@ recc
 .vscode
 data
 instance
+__pycache__

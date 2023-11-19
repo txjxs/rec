@@ -1,3 +1,4 @@
 class Config:
-    SECRET_KEY = 'your_secret_key'
+    SECRET_KEY = 'something@something'
     DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
